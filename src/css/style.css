@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  color: #000;
+  font-size: 30px;
+  font-weight: 300;
+}
+button,input {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+  cursor: pointer;
+}
+#app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 700px;
+}
+/* 스크린 */
+.calculator .screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 18;
+  background-color: black;
+  padding: 0 35px;
+}
+.calculator .screen .calculteBox {
+  flex-grow: 3;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+.calculator .screen .calculteBox .timerBox {
+    width: 22px;
+    height: 26px;
+    margin-bottom: 8px;
+    background: url('../images/timer.png') no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+}
+.calculator .screen .calculteBox .timerBox:hover {
+  scale: 1.1;
+}
+.calculator .screen p {
+  color: #bdbcbc;
+}
+.calculator .screen .resultBox {
+  flex-grow: 5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding: 30px 0;
+}
+.calculator .screen h4 {
+  font-size: 80px;
+  font-weight: 300;
+  color: white;
+}
+
+/* 버튼 */
+.calculator .buttons {
+  flex-grow: 30;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.calculator .button {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.calculator .button button {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #313131;
+  border-bottom: 0.1px solid #757575;
+}
+.calculator .button button:hover {
+  background-color: #191919;
+}
+.calculator .button button:first-child {
+  background-color: #404040;
+}
+.calculator .button button:first-child:hover {
+  background-color: #313131;
+}
+.calculator .buttons .button.operator button {
+  font-size: 40px;
+  border-right: none;
+  background-color: #ff8913;
+  border-bottom: 0.1px solid rgb(200, 200, 200);
+}
+.calculator .buttons .button.operator button:nth-child(3) {
+    font-size: 60px;
+  }
+.calculator .buttons .button.operator button:hover {
+  background-color: #ff7411;
+}
